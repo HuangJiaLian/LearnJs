@@ -190,3 +190,423 @@ href: hyper refreence
 </html>
 ------------------------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------------------------
+font and font size
+        <style>
+        body {
+            font-size: 12px;
+        }
+        h2 {
+            color: rgb(0, 232, 15);
+            font-size: 1.5em; <!-- 1.5em = 1.5 * 12px-->
+        }  
+        
+        #rabbits-info-heading {
+            background-color: purple;
+        }
+        
+        p {
+            color: rgb(191, 0, 255);
+            font-family: "Helvetica", sans-serif;
+        }
+        
+        .song-lyrics {
+            background-color: yellow;
+            font-family: monospace;
+        }
+        
+        </style>
+
+em: em is a unit of size based on the font-size of the current font.
+
+------------------------------------------------------------------------------------------------------------------
+font-style:
+
+        <style>
+        body {
+            font-size: 12px;
+        }
+        h2 {
+            color: rgb(0, 232, 15);
+            font-size: 1.5em;
+        }  
+        
+        #rabbits-info-heading {
+            background-color: purple;
+        }
+        
+        p {
+            color: rgb(191, 0, 255);
+            font-family: "Helvetica", sans-serif;
+        }
+        
+        #rabbits-info {
+            color: purple;
+            font-weight: bold;
+        }
+        
+        .song-lyrics {
+            background-color: yellow;
+            font-family: fantasy;
+            font-size: 13px;
+            font-style: italic;
+        }
+        
+        </style>
+------------------------------------------------------------------------------------------------------------------
+<style>
+        body {
+            font-size: 12px;
+        }
+        h2 {
+            color: rgb(0, 232, 15);
+            font-size: 1.5em;
+        }  
+        
+        #rabbits-info-heading {
+            background-color: purple;
+        }
+        
+        p {
+            color: rgb(191, 0, 255);
+            font-family: "Helvetica", sans-serif;
+        }
+        
+        #rabbits-info {
+            color: purple;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        .song-lyrics {
+            background-color: yellow;
+            font-family: fantasy;
+            font-size: 13px;
+            font-style: italic;
+            line-height: 1.5em;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        </style>
+------------------------------------------------------------------------------------------------------------------
+最近几天我在可汗学院学习编程，主要学的内容是JavaScript,HTML,和CSS。 我非常喜欢可汗学院的教学方式。每一节课只有一个知识点，每个知识点只
+讲几分钟。当一个知识点讲完之后马上会有编程练习，以确保你真正地掌握了这个知识。还有更为重要的是，可汗学院的作业评测系统，让你感觉好像是有一个
+老师在你的旁边，题目做错了会提示你，直到你完成这个练习。
+
+今天还发现了一个不花钱建立个人博客的方法，那就是在github做个人博客网站，结合最近几天的内容，我就在github上实现了这篇博客文章。感觉很酷。
+
+福州，其实挺美的，只是可惜就我一个人。
+
+
+我叫黄杰，用谐音取了一个外号叫Jack。我很喜欢可汗学院的课程，我一边在可汗学院上学习编程，一边构建自己的博客网站。
+我很享受这个过程，所以我来到了Github,在这里学以致用。
+------------------------------------------------------------------------------------------------------------------
+div用来分块的
+span 用来单独选择的
+------------------------------------------------------------------------------------------------------------------
+长宽，overflow
+        #official-info {
+            background: rgb(230, 230, 230);
+            width: 70%;
+            height: 180px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+------------------------------------------------------------------------------------------------------------------ 
+所有成员都看成一个盒子      
+    <style>
+        .lovey-dovey {
+            color: red;
+        }
+        
+        #official-info {
+            background: rgb(230, 230, 230);
+            width: 70%;
+            height: 180px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin: 15px 0px 10px 6px;
+            border: 2px dashed rgb(161, 161, 161);
+            padding: 6px;
+        }
+        
+        #cute-cat {
+            width: 120px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 6px ridge red;
+        }
+        
+        #container {
+            width: 400px;
+            margin: auto;
+            border: 1px solid rgb(145, 0, 0);
+            border-top: 10px solid purple;
+            padding: 15px;
+        }
+    </style>
+------------------------------------------------------------------------------------------------------------------
+位置关系：position
+z-index: 位置出场的顺序
+
+        <style>
+        body {
+            font-family: fantasy;
+            color: rgb(199, 177, 14);
+        }
+        
+        #landscape {
+            width: 250px;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            z-index: 1;
+        }
+        
+        #winston {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+        #hopper {
+            position: absolute;
+            top: 30px;
+            left: 80px;
+            z-index: 3;
+        }
+        
+        h1 {
+            position: fixed;
+            z-index: 4;
+            left: 30px;
+        }
+        
+        #song {
+            position: relative;
+            top: 220px;
+        }
+        </style>
+------------------------------------------------------------------------------------------------------------------
+悬浮：
+        <style>
+        #hopper-pic {
+            width: 100px;
+            float: left;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            
+        }
+        #hopper-footer {
+            background-color: rgb(232, 232, 232);
+            padding: 6px;
+            clear: both;
+        }
+        
+        #hopper-links {
+            float: right;
+            width: 30%;
+            margin-left: 10px;
+        }
+        </style>
+
+-----------------------------------------------------------------------------------------------------------------
+定义多个类id
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Using multiple CSS classes</title>
+        <style>
+            p {
+                font-family: monospace;
+            }
+            
+            #donut-header {
+                font-family: "Garamond", "Palatino", serif;
+            }
+            
+            .fact {
+                border-top: 1px solid rgb(222, 222, 222);
+                border-bottom: 1px solid rgb(222, 222, 222);
+                padding-top: 6px;
+                padding-bottom: 6px;
+                
+            }
+            
+            .warning {
+                background-color: red;
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <h1 id="donut-header">Donut Nutrition Facts</h1>
+
+        <p class="fact warning">
+            Warning: Eating too many donuts can be bad for your health. Just ask Winston.
+        </p>
+
+        <p>A donut is a type of <strong class="warning">deep fried</strong> dough confectionery or dessert food. The doughnut is popular in many countries and prepared in various forms as a sweet snack that can be homemade or purchased in bakeries, supermarkets, food stalls, and franchised specialty outlets.</p>
+        
+        <p class="fact">
+            Did you know? Donut can also be spelled "doughnut."
+        </p>
+        
+        <p>The two most common types are the <strong>toroidal ring doughnut</strong> and the <strong>filled doughnut</strong>—which is injected with fruit preserves, cream, custard, or other sweet fillings. A small spherical piece of dough may be cooked as a doughnut hole. Other shapes include rings, balls, and flattened spheres, as well as ear shapes, twists and other forms. Doughnut varieties are also divided into cake and risen type doughnuts.</p>
+    </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------
+找p中含有warning类的东东
+            p.warning {
+                border: 5px solid orange;
+            }
+-----------------------------------------------------------------------------------------------------------------
+CSS descendant selectors 
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS descendant selectors</title>
+        <style>
+            .orange {
+                background-color: orange;
+            }
+            
+            .yellow {
+                background-color: yellow;
+            }
+            
+            .purple {
+                background-color: purple;
+                color: white;
+            }
+            
+            p .purple {
+                color: purple;
+                background-color: transparent;
+            }
+            
+            ul.spacey li strong {
+                line-height: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Carrot Facts</h1>
+        
+        <p>Colors that carrots come in:</p>
+        <ul class="spacey">
+            <li>
+                <strong class="orange">Orange</strong>
+            </li>
+            <li>
+                <strong class="purple">Purple</strong>
+            </li>
+            <li>
+                <strong class="yellow">Yellow</strong>
+            </li>
+        </ul>
+        
+        <p>Did you know? Carrots were <strong class="purple">purple</strong> before the 17th century, but then were cultivated by Dutch farmers until they became the sweet orange carrots that we know today.</p>
+
+    </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------
+group selector 
+CSS dynamic pseudo-classes
+hover 当鼠标划过
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS dynamic pseudo-classes</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+            
+            h1, h2 {
+                font-family: cursive;
+            }
+            
+            a:hover, a:active, a:focus { 
+                background-color: rgb(255, 0, 251);
+            }  
+            
+        </style>
+    </head>
+    <body>
+    
+        <h1>Famous paintings</h1>
+        
+        <p>You can learn more about these famous paintings on <a href="https://www.khanacademy.org">Khan Academy</a>.</p>
+        
+        
+        <h2>Baroque</h2>
+        <ul>
+            <li>
+                <a href="https://www.khanacademy.org/humanities/monarchy-enlightenment/baroque-art1/spain/v/vel-zquez-las-meninas-c-1656">
+                    Velázquez, Las Meninas
+                </a>
+            </li>
+            <li>
+                <a href="https://www.khanacademy.org/humanities/monarchy-enlightenment/baroque-art1/baroque-italy/v/caravaggio-s-calling-of-st-matthew-c-1599-1600">Caravaggio, Calling of St. Matthew</a>
+            </li>
+            <li>
+                <a href="https://www.khanacademy.org/humanities/monarchy-enlightenment/baroque-art1/holland/a/rembrandt-night-watch">Rembrandt, Night watch</a>
+            </li>
+        </ul>
+        
+        <h2>Mannerism</h2>
+        <ul>
+            <li>
+                <a href="https://www.khanacademy.org/humanities/renaissance-reformation/mannerism1/v/parmigianino-madonna-of-the-long-neck-1530-33">
+                    Parmigianino, Madonna of the Long Neck
+                </a>
+            </li>
+            <li>
+                <a href="https://www.khanacademy.org/humanities/renaissance-reformation/mannerism1/a/el-greco-view-of-toledo">
+                    El Greco, View of Toledo
+                </a>
+            </li>
+        </ul>
+        
+        <h2>Abstract</h2>
+        <ul>
+            <li>
+                <a href="https://www.khanacademy.org/humanities/art-1010/early-abstraction/cubism/a/picasso-guernica">
+                    Picasso, Guernica
+                </a>
+            </li>
+            <li>
+                <a href="https://www.khanacademyd.org/humanities/art-1010/early-abstraction/cubism/a/braque-the-portuguese">
+                    Braque, The Portuguese
+                </a>
+            </li>
+        </ul>
+        
+        
+
+    </body>
+</html>
+-----------------------------------------------------------------------------------------------------------------
+Using inline CSS styles
+
+<h1 style="background: salmon; color: white;">Salmon Mania</h1>
+    
+-----------------------------------------------------------------------------------------------------------------    
+语法检查网站
+validator.w3.org 
