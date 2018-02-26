@@ -87,4 +87,259 @@ Finding elements by ID
 </html>
 
 -----------------------------------------------------------------------------------
+Finding multiple DOM elements by tag or class name
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Finding multiple DOM elements by tag or class name</title>
+    </head>
+    <body>
 
+        <h1 id="heading">All about dogs</h1>
+        
+        <p>The domestic <span class="animal">dog</span> is known as man's best friend. The <span class="animal">dog</span> was the first domesticated animal and has been widely kept as a working, hunting, and pet companion. According to recent coarse estimates, there are currently between 700 million and one billion <span class="animal">dog</span>s, making them the most abundant predators in the world. <a href="http://en.wikipedia.org/wiki/Dog">Read more on Wikipedia</a>.</p>
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dog_sleeping-puppy.png" height="150">
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dogs_collies.png" height="150">
+        
+        <script>
+            var headingEl = document.getElementById("heading");
+            headingEl.innerHTML = "All about cats";
+            
+            var nameEls = document.getElementsByClassName("animal");
+            console.log(nameEls);
+            // HTMLCollection
+            console.log(nameEls[0]);
+            for (var i = 0; i < nameEls.length; i++) {
+                nameEls[i].innerHTML = "cat";
+            }
+        </script>
+        
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Custom name tags</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            .name-tag {
+                border: 1px solid red;
+                border-radius: 6px;
+                width: 300px;
+                height: 150px;
+                margin-bottom: 10px;
+                background: red;
+                font-family: sans-serif;
+            }
+            
+            .name-tag h1 {
+                color: white;
+                text-align: center;
+                height: 25px;
+                margin: 5px 0px 0px 0px;
+                font-size: 20px;
+            }
+            .name-tag p {
+                position: relative;
+                left: 5px;
+                padding: 10px;
+                width: 290px;
+                height: 90px;
+                background: white;
+                font-family: cursive;
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        
+        <div class="name-tag">
+            <h1>Hello, my name is...</h1>
+            <p>Grace Hopper</p>
+        </div>
+        
+        <div class="name-tag">
+            <h1>Hello, my name is...</h1>
+            <p>Alan Turing</p>
+        </div>
+        
+        <script>
+            var headEls = document.getElementsByTagName("h1");
+            for(var i = 0; i < headEls.length; i++){
+                headEls[i].innerHTML = "Allo";
+            }
+        </script>
+    </body>
+</html>
+-----------------------------------------------------------------------------------
+Finding elements by CSS selector
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Finding elements by CSS selector</title>
+        <style>
+            p .animal {
+                color: red;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <h1 id="heading">All about dogs</h1>
+        
+        <p>The domestic <span class="animal">dog</span> is known as man's best friend. The <span class="animal">dog</span> was the first domesticated animal and has been widely kept as a working, hunting, and pet companion. According to recent coarse estimates, there are currently between 700 million and one billion <span class="animal">dog</span>s, making them the most abundant predators in the world. <a href="http://en.wikipedia.org/wiki/Dog">Read more on Wikipedia</a>.</p>
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dog_sleeping-puppy.png" height="150">
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dogs_collies.png" height="150">
+        
+        <script>
+            var headingEl = document.querySelector("#heading");
+            headingEl.innerHTML = "All about cats";
+            
+            var nameEls = document.querySelectorAll("p .animal");
+            console.log(nameEls);
+            // NodeList
+            console.log(nameEls[0]);
+            for (var i = 0; i < nameEls.length; i++) {
+                nameEls[i].innerHTML = "cat";
+            }
+        </script>
+        
+    </body>
+</html>
+
+-----------------------------------------------------------------------------------
+Changing attributes
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Changing attributes</title>
+        <style>
+            p .animal {
+                color: red;
+            }
+            
+            a[href*="Dog"] {
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 id="heading">All about dogs</h1>
+        
+        <p>The domestic <span class="animal">dog</span> is known as man's best friend. The <span class="animal">dog</span> was the first domesticated animal and has been widely kept as a working, hunting, and pet companion. According to recent coarse estimates, there are currently between 700 million and one billion <span class="animal">dog</span>s, making them the most abundant predators in the world. <a href="http://en.wikipedia.org/wiki/Dog">Read more on Wikipedia</a>.</p>
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dog_sleeping-puppy.png" height="150">
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dogs_collies.png" height="150">
+        
+        <script>
+            var imageEls = document.getElementsByTagName("img");
+            for (var i = 0; i < imageEls.length; i++) {
+                imageEls[i].src = "https://www.kasandbox.org/programming-images/animals/cat.png";
+            }
+            
+            var linkEls = document.querySelectorAll("a[href*=\"Dog\"]");
+            for (var i = 0; i < linkEls.length; i++) {
+                linkEls[i].href = "http://en.wikipedia.org/wiki/Cat";
+            }
+            var headingEl = document.querySelector("#heading");
+            headingEl.innerHTML = "All about cats";
+            
+            var nameEls = document.querySelectorAll("p .animal");
+            console.log(nameEls);
+            // NodeList
+            console.log(nameEls[0]);
+            for (var i = 0; i < nameEls.length; i++) {
+                nameEls[i].innerHTML = "cat";
+            }
+        </script>
+        
+    </body>
+</html>
+
+        <script>
+var avatarEls = document.getElementsByTagName("img");
+for(var i = 0; i < avatarEls.length; i++){
+    avatarEls[i].height = 100;
+    avatarEls[i].title = avatarEls[i].alt;
+}
+        </script>
+
+
+-----------------------------------------------------------------------------------
+Changing styles
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Changing styles</title>
+        <style>
+            p .animal {
+                color: red;
+            }
+            
+            a[href*="Dog"] {
+                color: purple;
+            }
+            
+            #heading {
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 id="heading">All about dogs</h1>
+        
+        <p>The domestic <span class="animal">dog</span> is known as man's best friend. The <span class="animal">dog</span> was the first domesticated animal and has been widely kept as a working, hunting, and pet companion. According to recent coarse estimates, there are currently between 700 million and one billion <span class="animal">dog</span>s, making them the most abundant predators in the world. <a href="http://en.wikipedia.org/wiki/Dog">Read more on Wikipedia</a>.</p>
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dog_sleeping-puppy.png" height="150">
+        
+        <img src="https://www.kasandbox.org/programming-images/animals/dogs_collies.png" height="150">
+        
+        <script>
+            var imageEls = document.getElementsByTagName("img");
+            for (var i = 0; i < imageEls.length; i++) {
+                imageEls[i].src = "https://www.kasandbox.org/programming-images/animals/cat.png";
+            }
+            
+            var linkEls = document.querySelectorAll("a[href*=\"Dog\"]");
+            for (var i = 0; i < linkEls.length; i++) {
+                linkEls[i].href = "http://en.wikipedia.org/wiki/Cat";
+            }
+            
+            var headingEl = document.querySelector("#heading");
+            headingEl.style.color = "orange";
+            headingEl.style.backgroundColor = "black";
+            headingEl.style.textAlign = "center";
+            headingEl.innerHTML = "All about cats";
+            
+            var nameEls = document.querySelectorAll("p .animal");
+            for (var i = 0; i < nameEls.length; i++) {
+                nameEls[i].innerHTML = "cat";
+            }
+        </script>
+        
+    </body>
+</html>
+
+
+-----------------------------------------------------------------------------------
